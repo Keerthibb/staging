@@ -1,0 +1,120 @@
+AzureAD+KeerthikumarBB@AHR-LTS-0007 MINGW64 ~/Desktop/Linux-Learning/Git
+$ git init    { git init ---> git will initialise }
+Initialized empty Git repository in C:/Users/KeerthikumarBB/Desktop/Linux-Learning/Git/.git/
+
+AzureAD+KeerthikumarBB@AHR-LTS-0007 MINGW64 ~/Desktop/Linux-Learning/Git (master)
+
+To check the git status using the above command
+ 
+$git status
+
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git learning.txt
+        git-2.32.0.tar.gz
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+
+ 
+$ git add .
+
+Now it is tracked
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   ../Git learning.txt
+        new file:   ../git-2.32.0.tar.gz
+
+Now doing commit
+
+
+*****************************************************************************Git and Git hub ********************************************************************
+
+version control {v1,v2,v3} To store the files into database
+
+Two types of version control
+
+1) Cenrtalized : Centralized version control systems are based on the idea that there is a single “central” copy of your project somewhere (probably on a server),
+ and programmers will “commit” their changes to this central copy.
+
+2) Distributed : These systems do not necessarily rely on a central server to store all the versions of a project’s files. 
+Instead, every developer “clones” a copy of a repository and has the full history of the project on their own hard drive.
+This copy (or “clone”) has all of the metadata of the original.
+
+
+$ git init    { git init ---> git will initialise }
+Initialized empty Git repository
+
+To configure the user email on git
+
+$ git config --global user.email "keerthikumarbb98@gmail.com"
+
+To configure the user name on git
+
+$ git config --global user.name "Keerthi"
+
+stages for git hub
+
+Working area
+
+staging area
+
+Now tracking { moving to staging or index area }
+
+To check the git status
+
+$git status
+
+To add the files into commit
+
+$ git add *  or git add . (or give the files name for adding)
+
+When the red color is there, that time the files are didn't went to staging area
+
+$ git commit -m "new files"  (To commit the new files)
+
+if we want to check the commit use the below command
+
+$ git log --oneline
+e35afe9 (HEAD -> master) new files
+
+$ git log
+commit e35afe9dac15ff436cc7bdd791c408bebe7e0f74 (HEAD -> master)
+Author: Keerthi <keerthikumarbb98@gmail.com>
+Date:   Mon Oct 11 05:16:20 2021 +0530
+
+    new files
+
+git remote add origin https://github.com/Keerthibb/staging.git   ---> Remote location (To add the remote and local repository)
+
+git push -u origin master ---> To push the git codes
+
+
+
+For cloning ---> git clone and link (i.e, https://github.com/Keerthibb/staging.git)
+
+sudo apt-get update
+
+sudo apt install git
+
+sudo git clone https://github.com/Keerthibb/staging.git
+
+keerthi@Ubuntu-VM:/Git$ ls -ltr staging/
+total 32
+-rw-r--r-- 1 root root 4399 Oct 11 06:07 'LVM and mounting.txt'
+-rw-r--r-- 1 root root 2556 Oct 11 06:07 'Linux Kill and Logout Users Command.txt'
+-rw-r--r-- 1 root root 2932 Oct 11 06:07 'How to check open ports in Linux using the CLI.txt'
+-rw-r--r-- 1 root root 9518 Oct 11 06:07 'CPU.sh and cd var logs details.txt'
+-rw-r--r-- 1 root root  234 Oct 11 06:07 '10 Linux distributions.txt'
+
